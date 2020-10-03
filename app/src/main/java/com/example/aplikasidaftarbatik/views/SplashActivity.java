@@ -1,7 +1,5 @@
 package com.example.aplikasidaftarbatik.views;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,7 +7,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.example.aplikasidaftarbatik.MainActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.aplikasidaftarbatik.LoginActivity;
 import com.example.aplikasidaftarbatik.R;
 
 public class SplashActivity extends AppCompatActivity {
@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //memanggil main activity
-                Intent panggil = new Intent(SplashActivity.this, MainActivity.class);
+                Intent panggil = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(panggil);
                 //splash activity hilang
                 finish();
