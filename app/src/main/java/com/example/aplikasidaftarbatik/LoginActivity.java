@@ -259,7 +259,7 @@ public class LoginActivity extends AppCompatActivity {
             showProgress(false);
 
             if (success) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                 intent.putExtra(TAG_ID, id);
                 intent.putExtra(TAG_EMAIL, email);
                 if (admin != null) {
@@ -288,7 +288,7 @@ public class LoginActivity extends AppCompatActivity {
         name = sharedpreferences.getString(TAG_NAME, null);
 
         if (session) {
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
             intent.putExtra(TAG_ID, id);
             intent.putExtra(TAG_EMAIL, email);
             intent.putExtra(TAG_NAME, name);
