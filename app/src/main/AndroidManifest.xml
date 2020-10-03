@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".views.SplashActivity"
+
+        <activity
+            android:name=".views.SplashActivity"
             android:theme="@style/AppTheme.Thema2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
