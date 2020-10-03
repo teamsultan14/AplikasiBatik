@@ -6,7 +6,7 @@
 
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="prompt_password_repeat">Password (Diulang)</string>
+    <string name="prompt_password_repeat">Ulangi Password</string>
     <string name="prompt_name">Nama Lengkap</string>
     <string name="prompt_phone">Nomor Telepon</string>
     <string name="action_sign_in">Masuk atau Mendaftar</string>
@@ -25,7 +25,7 @@
     <string name="login_header_information">Isilah form ini dengan akun login anda,
         atau buat akun terlebih dahulu untuk dapat menggunakan aplikasi ini.</string>
 
-    <string name="txt_welcome">Selamat datang</string>
+    <string name="txt_welcome">Selamat datang di testing home</string>
 
     <string name="btn_logout">Logout</string>
 </resources>
