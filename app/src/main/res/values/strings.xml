@@ -28,7 +28,7 @@
     <string name="txt_welcome">Selamat datang</string>
 
     <string name="btn_logout">Logout</string>
-    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_home">Beranda</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -67,13 +67,24 @@
     <string name="next_day_ground_delivery">Next day ground delivery</string>
     <string name="pick_up">Pick up</string>
     <string name="action_contact">Contact</string>
-    <string name="action_order">Order</string>
-    <string name="action_status">Status</string>
-    <string name="action_favorites">Favorites</string>
+    <string name="action_cari">Cari</string>
+    <string name="action_notif">Notifikasi</string>
+    <string name="action_akun">Profil</string>
     <string name="action_order_message">You selected Order.</string>
     <string name="action_status_message">You selected Status.</string>
     <string name="action_favorites_message">You selected Favorites.</string>
     <string name="action_contact_message">You selected Contact.</string>
     <!-- batas string uji coba -->
+
+
+    <string name="daerah_batik">daerah batik</string>
+    <string name="info_info">info-info</string>
+    <string name="action_logout">Log Out</string>
+    <string name="action_cari_message">pilih cari</string>
+    <string name="action_akun_message">pilih akun</string>
+    <string name="action_kontak_message">pilih kontak</string>
+    <string name="action_notif_message">pilih notif</string>
+    <string name="action_logout_message">pilih logout</string>
+
 
 </resources>
