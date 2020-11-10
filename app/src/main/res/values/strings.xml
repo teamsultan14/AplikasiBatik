@@ -85,6 +85,7 @@
     <string name="action_kontak_message">pilih kontak</string>
     <string name="action_notif_message">pilih notif</string>
     <string name="action_logout_message">pilih logout</string>
+    <string name="teks_splash">"Lestarikan Batik Mu"</string>
 
 
 </resources>
