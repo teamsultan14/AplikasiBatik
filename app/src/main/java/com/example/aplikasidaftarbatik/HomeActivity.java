@@ -108,12 +108,6 @@ public class HomeActivity extends AppCompatActivity {
         return true;
     }
 
-    /**
-     * Handles app bar item clicks.
-     *
-     * @param item Item clicked.
-     * @return True if one of the defined items was clicked.
-     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -157,39 +151,12 @@ public class HomeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * Displays a Toast with the message.
-     *
-     * @param message Message to display.
-     */
+//menampilkan toast
     public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
     }
 
-    /**
-     * Shows a message that the donut image was clicked.
-     */
-    public void showDonutOrder(View view) {
-        mOrderMessage = getString(R.string.donut_order_message);
-        displayToast(mOrderMessage);
-    }
-
-    /**
-     * Shows a message that the ice cream sandwich image was clicked.
-     */
-    public void showIceCreamOrder(View view) {
-        mOrderMessage = getString(R.string.ice_cream_order_message);
-        displayToast(mOrderMessage);
-    }
-
-    /**
-     * Shows a message that the froyo image was clicked.
-     */
-    public void showFroyoOrder(View view) {
-        mOrderMessage = getString(R.string.froyo_order_message);
-        displayToast(mOrderMessage);
-    }
 
     //batas akhir bagian menu
     
