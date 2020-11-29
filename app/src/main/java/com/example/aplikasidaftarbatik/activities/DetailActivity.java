@@ -1,5 +1,6 @@
 package com.example.aplikasidaftarbatik.activities;
 
+import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -22,6 +23,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView detailHargaTinggi;
     TextView detailMaknaBatik;
 
+    @SuppressLint({"InlinedApi", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

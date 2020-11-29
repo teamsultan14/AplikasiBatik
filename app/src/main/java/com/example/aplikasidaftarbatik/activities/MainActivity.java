@@ -1,10 +1,14 @@
 package com.example.aplikasidaftarbatik.activities;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -35,6 +39,13 @@ import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String EXTRA_MESSAGE = "com.example.aplikasidaftarbatik.extra.MESSAGE" ;
+    //bahan logout
+    SharedPreferences sharedpreferences;
+    Intent intent;
+    // The order message, displayed in the Toast and sent to the new Activity.
+    private String mOrderMessage;
 
 
     //recyclerView
@@ -197,6 +208,39 @@ public class MainActivity extends AppCompatActivity {
     public void displayRefresh() {
         labelNoInternet.setVisibility(View.VISIBLE);
         refreshButton.setVisibility(View.VISIBLE);
+    }
+
+    //bagian menu opsi
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Do nothing
+        if (item.getItemId() == R.id.action_logout) {
+            sharedpreferences = getSharedPreferences(
+                    LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
+
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putBoolean(LoginActivity.session_status, false);
+            editor.putString(LoginActivity.TAG_ID, null);
+            editor.putString(LoginActivity.TAG_EMAIL, null);
+            editor.putString(LoginActivity.TAG_NAME, null);
+            editor.putString(LoginActivity.TAG_PHONE, null);
+            editor.apply();
+            Intent intent = new Intent(MainActivity.this,
+                    LoginActivity.class);
+            intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
+            finish();
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 
