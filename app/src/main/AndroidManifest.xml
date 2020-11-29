@@ -3,32 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.aplikasidaftarbatik">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/batikulogo"
+        android:icon="@drawable/batikuicon"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/batikulogo"
+        android:roundIcon="@drawable/batikuicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-
+        <activity android:name=".activities.LoginActivity" android:theme="@style/SplashTheme"/>
+        <activity android:name=".activities.SearchActivity" />
+        <activity android:name=".activities.MainActivity" />
         <activity
-            android:name=".views.SplashActivity"
-            android:theme="@style/AppTheme.Thema2">
+            android:name=".activities.SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"
-            android:theme="@style/AppTheme.Thema2"/>
-        <activity
-            android:name=".HomeActivity"
-            android:label="@string/title_activity_home"
-            />
+        <activity android:name=".activities.DetailActivity" />
     </application>
 
 </manifest>
