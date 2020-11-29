@@ -3,36 +3,46 @@ package com.example.aplikasidaftarbatik.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bumptech.glide.Glide;
 import com.example.aplikasidaftarbatik.R;
 
 public class SplashActivity extends AppCompatActivity {
+    ImageView imglogo;
+    TextView teksLogo;
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_splash);
 
-        ImageView splashImage = findViewById(R.id.splashImage);
+        //inisialisasi objek
+        imglogo = findViewById(R.id.splash_imglogo);
+        teksLogo = findViewById(R.id.splash_imglogo_teks);
 
-        Glide.with(this)
-                .load(R.drawable.splash_foto)
-                .into(splashImage);
+        // sumber animasi
+        Animation animation = AnimationUtils.loadAnimation(this,R.anim.fadeout);
 
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+        //implementasikan animasi/ mulai animasi
+        imglogo.startAnimation(animation);
+        teksLogo.startAnimation(animation);
+
+        //mejalankan splash activities beberapa detik
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //setelah loading maka akan langsung berpindah ke main activity
-                Intent main = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(main);
+                //memanggil main activity
+                Intent panggil = new Intent(SplashActivity.this, LoginActivity.class);
+                startActivity(panggil);
+                //splash activity hilang
                 finish();
-            }
-        }, 2000);
 
+            }
+        }, 5000);
     }
 }

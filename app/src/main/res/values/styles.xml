@@ -12,8 +12,5 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="DetailTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimaryDark">@color/black</item>
-    </style>
 
 </resources>

@@ -111,7 +111,7 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/custom_toast_waktu"
         android:padding="12dp"
-        android:textColor="@color/white"
+        android:textColor="@color/colorWhite"
         android:translationY="150dp"
         tools:text="Waktu info" />
 

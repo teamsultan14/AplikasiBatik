@@ -34,6 +34,7 @@
     <string name="permission_rationale">"Izin kontak diperlukan untuk menyediakan penyelesaian email."</string>
     <string name="login_header_information">Isilah form ini dengan akun login anda,
         atau buat akun terlebih dahulu untuk dapat menggunakan aplikasi ini.</string>
+    <string name="teks_splash">lestarikan batik kita</string>
 
 
 </resources>
