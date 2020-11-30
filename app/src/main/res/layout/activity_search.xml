@@ -14,7 +14,7 @@
         android:background="@drawable/custom_search"
         app:iconifiedByDefault="false"
         app:layout_constraintTop_toTopOf="parent"
-        app:queryHint="Mau Cari Batik Lainnya?......" />
+        app:queryHint="Mau Cari Game Lainnya?......" />
 
     <TextView
         android:id="@+id/label_info_search"

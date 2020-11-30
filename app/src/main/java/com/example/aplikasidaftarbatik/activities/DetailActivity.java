@@ -49,8 +49,8 @@ public class DetailActivity extends AppCompatActivity {
 
         detailNamaBatik.setText(getIntent().getStringExtra("namaBatik"));
         detailDaerahBatik.setText(getIntent().getStringExtra("daerahBatik"));
-        detailHargaRendah.setText("Rp." + getIntent().getStringExtra("hargaRendah"));
-        detailHargaTinggi.setText("Rp." + getIntent().getStringExtra("hargaTinggi"));
+        detailHargaRendah.setText(getIntent().getStringExtra("hargaRendah"));
+        detailHargaTinggi.setText(getIntent().getStringExtra("hargaTinggi"));
         detailMaknaBatik.setText(getIntent().getStringExtra("maknaBatik"));
 
 

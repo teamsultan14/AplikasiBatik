@@ -20,7 +20,7 @@
             android:layout_margin="8dp"
             android:background="@drawable/custom_search"
             app:iconifiedByDefault="false"
-            app:queryHint="Mau Cari Batik Apa?....." />
+            app:queryHint="Mau Cari Game Apa?....." />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
