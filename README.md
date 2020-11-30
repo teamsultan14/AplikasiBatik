@@ -1,15 +1,12 @@
-# AplikasiDaftarBatik - Kelompok 13
+# AplikasiDaftarBatik - Kelompok DroidNator
 
 Aplikasi ini mempunyai fitur tambahan :
 
 * Image Slider
+* Login with SQlite
 * Pencarian batik
-* memberitahu user sudah berapa lama user tidak menggunakan aplikasi batik ini,<br /> 
-   pemberitahuan muncul setelah 10 menit keluar dari aplikasi, <br />
-   bentuk pemberitahuan seperti TOAST.<br />
-Contoh preview :<br />
-"Selamat Datang Kembali, sudah 20 menit Anda tidak berkunjung"
+* dll
 
-Minimum SDK version : 26
+Minimum SDK version : 15
 
 
