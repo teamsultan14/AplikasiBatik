@@ -14,7 +14,7 @@
         android:src="@drawable/batiku_splash"
         tools:ignore="ContentDescription" />
     <TextView
-        android:layout_width="223dp"
+        android:layout_width="245dp"
         android:layout_height="50dp"
         android:textSize="25sp"
         android:textStyle="italic"

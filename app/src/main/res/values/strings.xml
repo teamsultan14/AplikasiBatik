@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">BatikU</string>
-    <string name="deskripsi_batik">Deskripsi Batik :</string>
-    <string name="harga_tertinggi">Harga Max</string>
-    <string name="harga_terendah">Harga Min</string>
-    <string name="kisaran_harga">Kisaran Harga</string>
-    <string name="asal_daerah">Asal Daerah :</string>
-    <string name="daftar_batik">Daftar Batik</string>
+    <string name="app_name">GameU</string>
+    <string name="deskripsi_batik">Deskripsi Game :</string>
+    <string name="harga_tertinggi">Jumlah Rate</string>
+    <string name="harga_terendah">Top Rate</string>
+    <string name="kisaran_harga">Popularitas</string>
+    <string name="asal_daerah">Tanggal Rilis :</string>
+    <string name="daftar_batik">Daftar Game</string>
     <string name="no_internet_connection">No Internet Connection!</string>
     <string name="refresh">Refresh</string>
     <string name="tempat">Tempat</string>
@@ -34,7 +34,7 @@
     <string name="permission_rationale">"Izin kontak diperlukan untuk menyediakan penyelesaian email."</string>
     <string name="login_header_information">Isilah form ini dengan akun login anda,
         atau buat akun terlebih dahulu untuk dapat menggunakan aplikasi ini.</string>
-    <string name="teks_splash">lestarikan batik kita</string>
+    <string name="teks_splash">Gudangnya Info Game</string>
     <string name="action_logout">Logout</string>
 
 

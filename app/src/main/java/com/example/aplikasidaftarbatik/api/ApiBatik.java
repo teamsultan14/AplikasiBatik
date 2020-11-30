@@ -32,32 +32,33 @@ public class ApiBatik {
 
 
         List<Batik> dataBatik = new ArrayList<>();
-        AndroidNetworking.get("https://batikita.herokuapp.com/index.php/batik/all")
+        AndroidNetworking.get("https://api.rawg.io/api/games")
                 .setPriority(Priority.HIGH)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
 
-
-                        JSONArray jsonArray = null;
                         try {
-                            jsonArray = response.getJSONArray("hasil");
-                            for (int i = 0; i < jsonArray.length(); i++) {
-                                JSONObject data = jsonArray.getJSONObject(i);
-                                Batik item = new Batik(
-                                        data.getInt("id"),
-                                        data.getString("nama_batik"),
-                                        data.getString("daerah_batik"),
-                                        data.getString("makna_batik"),
-                                        data.getInt("harga_rendah"),
-                                        data.getInt("harga_tinggi"),
-                                        data.getInt("hitung_view"),
-                                        data.getString("link_batik"));
-                                dataBatik.add(item);
+                            if (response != null) {
+                                JSONArray jsonArray = response.getJSONArray("results");
+                                for (int i = 0; i < jsonArray.length(); i++) {
+                                    JSONObject data = jsonArray.getJSONObject(i);
+                                    Batik item = new Batik(
+                                            data.getInt("id"),
+                                            data.getString("name"),
+                                            data.getString("released"),
+                                            data.getString("slug"),
+                                            data.getInt("rating_top"),
+                                            data.getInt("ratings_count"),
+                                            data.getInt("reviews_text_count"),
+                                            data.getString("background_image"));
+                                    dataBatik.add(item);
+                                }
+                                mBatikViewModel.insert(dataBatik);
                             }
 
-                            mBatikViewModel.insert(dataBatik);
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -75,7 +76,7 @@ public class ApiBatik {
 
     public void getAllPopularBatik() {
         List<BatikSlide> dataBatikPopular = new ArrayList<>();
-        AndroidNetworking.get("https://batikita.herokuapp.com/index.php/batik/popular")
+        AndroidNetworking.get("https://api.rawg.io/api/games")
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -84,13 +85,13 @@ public class ApiBatik {
 
                         try {
                             if (response != null) {
-                                JSONArray jsonArray = response.getJSONArray("hasil");
+                                JSONArray jsonArray = response.getJSONArray("results");
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject data = jsonArray.getJSONObject(i);
                                     BatikSlide item = new BatikSlide(
                                             data.getInt("id"),
-                                            data.getString("nama_batik"),
-                                            data.getString("link_batik"));
+                                            data.getString("name"),
+                                            data.getString("background_image"));
                                     dataBatikPopular.add(item);
                                 }
 
