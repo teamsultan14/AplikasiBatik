@@ -9,4 +9,5 @@ Aplikasi ini mempunyai fitur tambahan :
 
 Minimum SDK version : 15
 
+dikarenakan adanya ganguan koneksi API batik maka konten di BatikU dialihkan menjadi GameU yang berisikan daftar info Game
 
