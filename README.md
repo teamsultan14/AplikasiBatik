@@ -1,4 +1,4 @@
-# AplikasiDaftarBatik - Kelompok DroidNator
+# AplikasiDaftarBatik - by DroidNator
 
 Aplikasi ini mempunyai fitur tambahan :
 
